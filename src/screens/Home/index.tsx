@@ -1,7 +1,8 @@
-import { SafeAreaView, View, Text } from 'react-native';
+import { SafeAreaView, View, Text, Pressable } from 'react-native';
 import styles from './styles';
 import { Camera, CameraType } from 'expo-camera';
 import { useState, useEffect } from 'react';
+import Icon from 'react-native-vector-icons/Feather';
 
 export const Home = () => {
 
@@ -37,9 +38,24 @@ export const Home = () => {
                 <Camera
                     type={type}
                     style={styles.camera}
-                >
+                />
+                <View style={styles.buttonsWrapper}>
+                    <Pressable
+                        style={styles.toggleCamType}
+                    >
 
-                </Camera>
+                    </Pressable>
+                    <Pressable
+                        style={styles.toggleCamType}
+                        onPress={toggleCameraType}
+                    >
+                         <Icon
+                            name="zap"
+                            color="#000"
+                            size={30}
+                        />
+                    </Pressable>
+                </View>
             </View>
         </SafeAreaView>
     )

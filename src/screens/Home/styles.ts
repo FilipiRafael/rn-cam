@@ -9,7 +9,22 @@ export default StyleSheet.create({
     },
     camera: {
         width: Dimensions.get('screen').width,
-        height: Dimensions.get('screen').height - 100,
+        height: Dimensions.get('screen').height - 120,
         borderRadius: 50
+    },
+    buttonsWrapper: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        height: 100,
+        paddingHorizontal: 20
+    },
+    toggleCamType: {
+        width: 60,
+        height: 60,
+        borderRadius: 50,
+        backgroundColor: '#f1f1f1',
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 });
